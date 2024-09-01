@@ -2,6 +2,9 @@
   <div class="card h-100">
       <h4>{{ travel.title }}</h4>
       <div class="card-body">
+        <div class="img mb-2">
+        <img :src="`${travel.cover_image}`" alt="" />
+      </div>
           <p>{{ travel.description }}</p>
           <a :href="getLink(travel.id)">More</a>
       </div>
@@ -16,7 +19,7 @@ export default {
   },
   data(){
       return{
-          serverUrl: 'http://127.0.0.1:8000',
+          serverUrl: 'http://127.0.0.1:8000/admin/travels',
       };
   },
   

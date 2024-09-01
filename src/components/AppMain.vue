@@ -21,7 +21,8 @@ export default {
   created() {
     axios.get(`${this.serverUrl}/admin/travels`)
   .then((resp) => {
-    this.travels = resp.data.results;
+    this.travels = resp.data;
+    console.log(resp.data);
   })
   .catch((error) => {
     console.error('Error fetching data:', error.response ? error.response.data : error.message);
