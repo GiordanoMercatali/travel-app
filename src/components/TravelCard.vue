@@ -1,38 +1,43 @@
-<script>
-export default {
-  data() {
-    return {
-      baseUrl: `http://127.0.0.1:8000/`,
-    };
-  },
-  props: {
-    cocktail: Object,
-  },
-};
-</script>
-
-<template>
-  <div class="card text-center mb-3">
-    <div class="card-body">
-      <h5>{{ cocktail.name }}</h5>
-      <div class="img mb-2">
-        <img :src="`${cocktail.image}`" alt="" />
+<template lang="">
+  <div class="card h-100">
+      <h4>{{ travel.title }}</h4>
+      <div class="card-body">
+          <p>{{ travel.description }}</p>
+          <a :href="getLink(travel.id)">More</a>
       </div>
-      <div class="info">
-        <router-link
-          :to="{ name: 'single-cocktail', params: { id: cocktail.id } }"
-          class="btn btn-primary mt-2"
-          >Details</router-link
-        >
-      </div>
-    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.card-body {
-  img {
-    max-width: 100%;
+<script>
+// import axios from "axios";
+export default {
+  props: {
+      travel: Object,
+  },
+  data(){
+      return{
+          serverUrl: 'http://127.0.0.1:8000',
+      };
+  },
+  
+  methods :{
+      getLink(currentId){
+              return `/${currentId}`;
+          }
+      }
   }
-}
+</script>
+
+<style lang="scss" scoped>
+  .card{
+      border: 1px solid black;
+      width: 20rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      min-height: 13rem;
+
+      .card-body{
+          border-top: 1px dotted black
+      }
+  }
 </style>

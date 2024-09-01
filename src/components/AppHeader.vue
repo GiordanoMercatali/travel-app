@@ -14,9 +14,6 @@ export default {
         <li>
           <router-link :to="{ name: 'home' }">Home</router-link>
         </li>
-        <li>
-          <router-link :to="{ name: 'travels' }">Travels</router-link>
-        </li>
       </ul>
     </nav>
   </div>
@@ -25,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 15vh;
-  background-color: #f5f3e7;
+  background-color: #ff0000;
   border-bottom: 1px solid black;
 
   nav {
