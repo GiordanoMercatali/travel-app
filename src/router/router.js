@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import AppHome from "../pages/AppHome.vue";
-// import SingleCocktailPage from "../pages/SingleCocktailPage.vue";
+import AppTravelPage from "../pages/AppTravelPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,11 +13,11 @@ const router = createRouter({
       component: AppHome,
     },
 
-    // {
-    //   path: "/cocktails/:id",
-    //   name: "single-cocktail",
-    //   component: SingleCocktailPage,
-    // },
+    {
+      path: "/travels/:id",
+      name: "travel-page",
+      component: AppTravelPage,
+    },
   ],
 });
 
