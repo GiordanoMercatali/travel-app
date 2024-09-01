@@ -1,12 +1,12 @@
 <template lang="">
   <div class="card h-100">
-      <h4>{{ travel.title }}</h4>
+      <h4>{{ this.travel.title }}</h4>
       <div class="card-body">
         <div class="img mb-2">
-        <img :src="`${travel.cover_image}`" alt="" />
+        <img :src="`${this.travel.cover_image}`" alt="" />
       </div>
-          <p>{{ travel.description }}</p>
-          <a :href="getLink(travel.id)">More</a>
+          <p>{{ this.travel.description }}</p>
+          <a :href="getLink(this.travel.id)">More</a>
       </div>
   </div>
 </template>
